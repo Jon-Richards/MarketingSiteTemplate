@@ -1,12 +1,14 @@
 {
-  "name": "marketing-site-views",
+  "name": "marketing-site",
   "version": "1.0.0",
-  "description": "Razor class library with React components and Tailwind CSS",
+  "description": "Marketing site with Razor components and React UI",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint src/Views/Client",
+    "format": "prettier --write \"src/Views/**/*.{ts,tsx,js,jsx,css,razor,html}\""
   },
   "devDependencies": {
     "@eslint/js": "^8.57.0",

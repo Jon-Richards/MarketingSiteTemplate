@@ -52,3 +52,15 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Node.js / npm
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Vite build output
+src/Views/wwwroot/bundle/
+
+# Environment
+.env.local
+.env.*.local

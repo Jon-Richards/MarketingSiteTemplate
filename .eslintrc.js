@@ -2,10 +2,9 @@ import js from '@eslint/js'
 import globals from 'globals'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
-import tseslint from 'typescript-eslint'
 
 export default [
-  { ignores: ['dist'] },
+  { ignores: ['dist', 'src/Views/wwwroot/bundle'] },
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {

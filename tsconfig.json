@@ -20,12 +20,12 @@
     /* Path aliases */
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./Client/components/*"],
-      "@pages/*": ["./Client/pages/*"],
-      "@features/*": ["./Client/features/*"],
-      "@styles/*": ["./Client/styles/*"]
+      "@components/*": ["./src/Views/Client/components/*"],
+      "@pages/*": ["./src/Views/Client/pages/*"],
+      "@features/*": ["./src/Views/Client/features/*"],
+      "@styles/*": ["./src/Views/Client/styles/*"]
     }
   },
-  "include": ["Client", "vite.config.ts"],
+  "include": ["src/Views/Client", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
