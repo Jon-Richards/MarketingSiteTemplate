@@ -1,0 +1,11 @@
+@namespace Views.Server.Components
+
+<div class="alert alert-info">
+    <h3>Hello from Razor Component</h3>
+    <p>Message: @Message</p>
+</div>
+
+@code {
+    [Parameter]
+    public string Message { get; set; } = "Default Message";
+}

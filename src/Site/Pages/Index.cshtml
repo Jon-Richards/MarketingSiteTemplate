@@ -1,5 +1,5 @@
 ﻿@page
-@using Client.Views
+@using Views.Server.Components
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -14,8 +14,12 @@
     <p>
         Hello should render below this paragraph.
     </p>
-    <component type="typeof(Client.Views.Hello)" render-mode="Static" param-Message="@("Apple")" />
-    @(await Html.RenderComponentAsync<Client.Views.Hello>(RenderMode.Static,
+    <component
+        type="typeof(Views.Server.Components.HelloWorld)"
+        render-mode="Static"
+        param-Message="@("Apple")"
+    />
+    @(await Html.RenderComponentAsync<HelloWorld>(RenderMode.Static,
         new {
             Message = "Something"
         }
