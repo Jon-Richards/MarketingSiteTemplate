@@ -5,23 +5,66 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<div class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold mb-4">Marketing Site Demo</h1>
+            <p class="text-xl opacity-90">Razor Components + React + Tailwind CSS</p>
+        </div>
+    </div>
 
-<div>
-    <p>
-        Hello should render below this paragraph.
-    </p>
-    <component
-        type="typeof(Views.Server.Components.HelloWorld)"
-        render-mode="Static"
-        param-Message="@("Apple")"
-    />
-    @(await Html.RenderComponentAsync<HelloWorld>(RenderMode.Static,
-        new {
-            Message = "Something"
-        }
-    ))
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto py-12 px-4">
+        
+        <!-- Razor Component Demo -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Razor Components</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                @(await Html.RenderComponentAsync<Card>(RenderMode.Static, new { Title = "Razor Card 1", Content = "This is a server-side Razor component rendered with Tailwind CSS." }))
+                @(await Html.RenderComponentAsync<Card>(RenderMode.Static, new { Title = "Razor Card 2", Content = "These components are compiled into the Views assembly." }))
+            </div>
+        </section>
+
+        <!-- Alert Demo -->
+        <section class="mb-12">
+            @(await Html.RenderComponentAsync<Alert>(RenderMode.Static, new { Message = "This Alert component demonstrates Razor components with Tailwind styling!" }))
+        </section>
+
+        <!-- HelloWorld Component -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Component Examples</h2>
+            <div class="bg-white rounded-lg shadow p-6">
+                @(await Html.RenderComponentAsync<HelloWorld>(RenderMode.Static, new { Message = "Welcome to the Marketing Site!" }))
+            </div>
+        </section>
+
+        <!-- React Components Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">React Components (Client-Side)</h2>
+            <div id="react-app" class="bg-white rounded-lg shadow p-6">
+                <p class="text-gray-600 mb-4">React components will render here when Vite build is integrated.</p>
+            </div>
+        </section>
+
+        <!-- Stats Grid -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Stats Showcase</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-8 text-center shadow-lg">
+                    <div class="text-4xl font-bold mb-2">100+</div>
+                    <div class="text-lg opacity-90">Components</div>
+                </div>
+                <div class="bg-gradient-to-br from-green-500 to-emerald-600 text-white rounded-lg p-8 text-center shadow-lg">
+                    <div class="text-4xl font-bold mb-2">5K</div>
+                    <div class="text-lg opacity-90">Happy Users</div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-500 to-pink-600 text-white rounded-lg p-8 text-center shadow-lg">
+                    <div class="text-4xl font-bold mb-2">99.9%</div>
+                    <div class="text-lg opacity-90">Uptime</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
 </div>

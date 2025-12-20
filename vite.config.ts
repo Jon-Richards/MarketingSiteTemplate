@@ -4,6 +4,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  root: 'src/Views',
   plugins: [react()],
   resolve: {
     alias: {
@@ -16,5 +17,12 @@ export default defineConfig({
   build: {
     outDir: 'src/Views/wwwroot/bundle',
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        entryFileNames: 'app.js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]',
+      },
+    },
   },
 })
