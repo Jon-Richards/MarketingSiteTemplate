@@ -32,67 +32,26 @@ A modern, full-stack template for building dynamic marketing sites using ASP.NET
 ```
 MarketingSiteTemplate/
 ├── src/
-│   ├── Views/                          # Razor Class Library (shared components)
-│   │   ├── Views.csproj                # RCL project file with npm build integration
-│   │   ├── Server/
-│   │   │   ├── Components/             # Server-rendered Razor components
-│   │   │   │   ├── Card.razor
-│   │   │   │   ├── Alert.razor
-│   │   │   │   └── HelloWorld.razor
-│   │   │   └── Pages/
-│   │   ├── Client/
-│   │   │   ├── components/             # React components
-│   │   │   │   ├── Button.tsx
-│   │   │   │   └── Stats.tsx
-│   │   │   ├── pages/
-│   │   │   ├── features/
-│   │   │   ├── styles/
-│   │   │   ├── App.tsx
-│   │   │   └── main.tsx
+│   ├── Views/                          # User interface library
+│   │   ├── Server/                     # Server-rendered Razor components
+│   │   ├── Client/                     # Client-rendered code
 │   │   └── wwwroot/                    # Static assets (RCL pattern)
-│   │       └── bundle/                 # Vite output directory
-│   ├── Site/                           # Main ASP.NET Core Razor Pages application
-│   │   ├── Site.csproj
-│   │   ├── Pages/
-│   │   │   ├── Index.cshtml
-│   │   │   ├── Privacy.cshtml
-│   │   │   └── Shared/
-│   │   ├── wwwroot/
-│   │   └── Program.cs
-│   ├── CMS/                            # Optional CMS application
-│   │   ├── CMS.csproj
-│   │   ├── Pages/
-│   │   └── Program.cs
-│   └── Storage/                        # Shared models/utilities
+│   │       └── bundle/                 # Bundled output (excluded from version control)
+│   ├── Site/                           # Publicly facing website application
+│   │   ├── Pages/                      # Page level views
+│   │   │   └── Shared/                 # Shared code between pages
+│   │   ├── wwwroot/                    # Static assets
+│   ├── CMS/                            # Content management system
+│   │   ├── Pages/                      # Page level views
+│   │   │   └── Shared/                 # Shared code between pages
+│   │   ├── wwwroot/                    # Static assets
+│   └── Storage/                        # Storage access repositories
 ├── test/
 │   ├── ViewsTests/                     # Razor component tests (XUnit + bunit)
-│   │   ├── ViewsTests.csproj
-│   │   └── Server/Components/
-│   │       ├── CardComponentTests.cs
-│   │       ├── AlertComponentTests.cs
-│   │       └── HelloWorldComponentTests.cs
 │   ├── ViewsClientTests/               # React component tests (Vitest)
-│   │   ├── setup.ts
-│   │   └── components/
-│   │       ├── Button.test.tsx
-│   │       └── Stats.test.tsx
 │   ├── SiteTests/                      # Site application tests
-│   │   └── SiteTests.csproj
 │   └── CMSTests/                       # CMS application tests
-│       └── CMSTests.csproj
-├── Configuration Files (Root)
-│   ├── vite.config.ts                  # Vite configuration
-│   ├── vitest.config.ts                # Vitest configuration
-│   ├── tsconfig.json                   # TypeScript configuration with path aliases
-│   ├── tailwind.config.js              # Tailwind CSS configuration
-│   ├── postcss.config.js               # PostCSS configuration
-│   ├── package.json                    # Node.js dependencies and scripts
-│   ├── MarketingSiteTemplate.sln       # Solution file
-│   └── README.md                       # This file
-├── agents/                             # Project documentation
-│   ├── IMPLEMENTATION_PLAN.md
-│   ├── TEST_COMPLETION_SUMMARY.md
-│   └── RAZOR_TESTS_COMPLETE.md
+├── agents/                             # Prompts and context for LLMs.
 └── doc/                                # Additional documentation
 ```
 
@@ -100,8 +59,8 @@ MarketingSiteTemplate/
 
 ### Prerequisites
 - **.NET 9 SDK** or later
-- **Node.js 18+** with npm
-- **Visual Studio Code** (recommended) or Visual Studio 2022+
+- **Node.js v22.12.0** or later
+- **NPM 10.9.0** or later
 
 ### Installation
 
@@ -173,13 +132,6 @@ npm run test:client:coverage     # With coverage report
 npm run test:dotnet              # Single run
 npm run test:dotnet:watch        # Watch mode
 ```
-
-**Test Results Summary:**
-- ✅ React Tests: 7 passing (Button: 5, Stats: 2)
-- ✅ Razor Tests: 19 passing (Card: 7, Alert: 6, HelloWorld: 8)
-- **Total: 26/26 tests passing**
-
-See [agents/TEST_COMPLETION_SUMMARY.md](agents/TEST_COMPLETION_SUMMARY.md) for detailed test documentation.
 
 ### Running the Application
 
