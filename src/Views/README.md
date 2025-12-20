@@ -328,6 +328,25 @@ Vite automatically uses the next available port (5174, 5175, etc.).
 - Check file extensions (.tsx, .ts)
 - Ensure `tsconfig.json` is in the Views root
 
+## Testing
+
+### Unit Tests for Razor Components
+```bash
+dotnet test test/ViewsTests
+```
+
+### Unit Tests for React Components
+```bash
+npm run test:client
+```
+
+### Run All Tests
+```bash
+npm run test
+```
+
+See [test/README.md](../../test/README.md) for detailed testing guide, best practices, and how to run tests in different modes (watch, coverage, UI).
+
 ## Learn More
 
 - [Vite Documentation](https://vitejs.dev/)
