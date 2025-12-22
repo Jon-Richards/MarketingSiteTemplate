@@ -69,3 +69,5 @@ src/Views/wwwroot/bundle/
 # Environment
 .env.local
 .env.*.local
+
+.fake

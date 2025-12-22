@@ -15,7 +15,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'src/Views/wwwroot/bundle',
+    outDir: path.resolve(__dirname, './src/Views/wwwroot/bundle'),
     emptyOutDir: true,
     rollupOptions: {
       output: {
