@@ -8,15 +8,34 @@
     <SectionOutlet SectionName="Head" />
 </HeadContent>
 
-<header class="mx-auto w-full border border-red-700 py-2 columns-1 text-center md:text-left">
-    <SectionOutlet SectionName="Header" />
-</header>
-<main>
-    @Body
-</main>
-<footer>
-    <SectionOutlet SectionName="Footer" />
-</footer>
+<div class="flex flex-col min-h-screen">
+    <header
+        class="
+            mx-auto
+            w-full
+            border
+            px-8
+            py-4
+            columns-1
+            md:columns-2 
+            text-center
+            md:text-left
+        "
+    >
+        <div>
+            <SectionOutlet SectionName="Header" />
+        </div>
+        <div class="hidden md:block md:text-right">
+            Navigation
+        </div>
+    </header>
+    <main class="grow mx-auto w-full border px-8 py-8 md:py-4 md:max-w-md">
+        @Body
+    </main>
+    <footer class="px-8 py-4 text-center">
+        <SectionOutlet SectionName="Footer" />
+    </footer>
+</div>
 
 <script src="_content/Views/bundle/app.js"></script>
 <SectionOutlet SectionName="Scripts" />

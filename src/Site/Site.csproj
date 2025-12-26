@@ -10,4 +10,7 @@
     <ProjectReference Include="..\Views\Views.csproj" />
   </ItemGroup>
 
+  <Target Name="NpmBuild" BeforeTargets="Build">
+    <Exec Command="npm run build" WorkingDirectory="$(MSBuildProjectDirectory)/.." />
+  </Target>
 </Project>
