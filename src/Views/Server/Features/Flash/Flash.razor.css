@@ -1,0 +1,23 @@
+.flash {
+  height: auto;
+  overflow: hidden;
+  transition: height 0.2s linear;
+}
+.flash--info {
+  background-color: #000;
+  color: #fff;
+}
+.flash--warning {
+  background-color: rgb(255, 230, 0);
+  color: #000;
+}
+.flash--error {
+  background-color: #f00;
+  color: #fff;
+}
+.flash--open {
+  height: auto;
+}
+.flash--closed {
+  height: 0;
+}

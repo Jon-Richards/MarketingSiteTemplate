@@ -1,0 +1,15 @@
+@namespace Views.Server.Components
+
+<div class="w-full" style="background-image: url(@BackgroundImage)">
+    <div class="w-full max-w-6xl mx-auto p-8 border">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string BackgroundImage { get; set; }
+}

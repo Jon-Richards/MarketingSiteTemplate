@@ -1,5 +1,7 @@
 @page "/about"
 @using Microsoft.AspNetCore.Components.Sections
+@using Views.Server.Components
+@using Views.Server.Features
 @using Views.Server.Layouts
 @layout BasicLayout
 
@@ -7,13 +9,27 @@
     <meta name="description" content="A simple about page." />
 </SectionContent>
 
+<SectionContent SectionName="Flashes">
+    <Flash Level="info">
+        Hello world!
+    </Flash>
+    <Flash Level="warning">
+        Warning!
+    </Flash>
+    <Flash Level="error">
+        Oh no!
+    </Flash>
+</SectionContent>
+
 <SectionContent SectionName="Header">
     <div>This is header slot content.</div>
 </SectionContent>
 
-<div>
-    This is body content.
-</div>
+<ContentBlock>
+    <p>
+        This is body content.
+    </p>
+</ContentBlock>
 
 <SectionContent SectionName="Footer">
     <div>This is footer content.</div>

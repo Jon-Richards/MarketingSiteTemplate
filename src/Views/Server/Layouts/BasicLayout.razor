@@ -1,6 +1,8 @@
 @inherits LayoutComponentBase
 @using Microsoft.AspNetCore.Components.Sections
 @using Microsoft.AspNetCore.Components.Web
+@using Views.Server.Components
+
 @namespace Views.Server.Layouts
 
 <HeadContent>
@@ -8,6 +10,7 @@
     <SectionOutlet SectionName="Head" />
 </HeadContent>
 
+<SectionOutlet SectionName="Flashes" />
 <div class="flex flex-col min-h-screen">
     <header
         class="
@@ -29,12 +32,10 @@
             Navigation
         </div>
     </header>
-    <main class="grow mx-auto w-full border px-8 py-8 md:py-4 md:max-w-md">
+    <main class="grow">
         @Body
     </main>
-    <footer class="px-8 py-4 text-center">
-        <SectionOutlet SectionName="Footer" />
-    </footer>
+    <PageFooter />
 </div>
 
 <script src="_content/Views/bundle/app.js"></script>

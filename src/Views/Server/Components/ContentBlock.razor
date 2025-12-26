@@ -1,0 +1,10 @@
+@namespace Views.Server.Components
+
+<div class="w-full max-w-6xl mx-auto p-8">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

@@ -22,10 +22,10 @@
     "paths": {
       "@components/*": ["./src/Views/Client/components/*"],
       "@pages/*": ["./src/Views/Client/pages/*"],
-      "@features/*": ["./src/Views/Client/features/*"],
-      "@styles/*": ["./src/Views/Client/styles/*"]
+      "@styles/*": ["./src/Views/Client/styles/*"],
+      "@features/*": ["./src/Views/Client/features/*"]
     }
   },
-  "include": ["src/Views/Client", "vite.config.ts"],
+  "include": ["src/Views/Client", "test/ViewsClientTests", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

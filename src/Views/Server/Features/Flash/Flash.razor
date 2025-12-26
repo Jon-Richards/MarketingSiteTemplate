@@ -1,0 +1,33 @@
+@namespace Views.Server.Features
+
+<div class="flash flash--@Model.Modifier flash--open" data-feature="flash">
+    <div class="flex columns-2 w-full max-w-6xl mx-auto px-8 py-4 text-center">
+        <div class="grow">
+            @ChildContent
+        </div>
+        @if (IsDismissible)
+        {
+            <div class="shrink">
+                <button type="button">x</button>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string Level { get; set; } = "info";
+
+    [Parameter]
+    public bool IsDismissible { get; set; } = true;
+
+    public FlashModel Model { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        Model = new FlashModel(Level);
+    }
+}
