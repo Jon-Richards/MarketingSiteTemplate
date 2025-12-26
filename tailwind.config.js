@@ -3,7 +3,7 @@ export default {
   content: [
     './src/Views/Server/**/*.{razor,html}',
     './src/Views/Client/**/*.{ts,tsx}',
-    './src/Site/Pages/**/*.{cshtml,html}',
+    './src/Site/Components/**/*.{cshtml,html,razor}',
   ],
   theme: {
     extend: {},

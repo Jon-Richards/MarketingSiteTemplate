@@ -38,7 +38,8 @@ MarketingSiteTemplate/
 │   │   └── wwwroot/                    # Static assets (RCL pattern)
 │   │       └── bundle/                 # Bundled output (excluded from version control)
 │   ├── Site/                           # Publicly facing website application
-│   │   ├── Pages/                      # Page level views
+|   |   ├── Components/                 # Razor components
+│   │   |   ├── Pages/                  # Page level views
 │   │   │   └── Shared/                 # Shared code between pages
 │   │   ├── wwwroot/                    # Static assets
 │   ├── CMS/                            # Content management system
@@ -46,7 +47,7 @@ MarketingSiteTemplate/
 │   │   │   └── Shared/                 # Shared code between pages
 │   │   ├── wwwroot/                    # Static assets
 │   └── Storage/                        # Storage access repositories
-├── test/
+├── test/                               # Test suite for the project
 │   ├── ViewsTests/                     # Razor component tests (XUnit + bunit)
 │   ├── ViewsClientTests/               # React component tests (Vitest)
 │   ├── SiteTests/                      # Site application tests

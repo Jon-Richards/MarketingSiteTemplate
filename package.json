@@ -14,7 +14,7 @@
     "test:client:ui": "vitest --ui --run",
     "test:client:coverage": "vitest --coverage --run",
     "test:client:watch": "vitest --watch",
-    "test:dotnet": "dotnet test",
+    "test:dotnet": "dotnet test test/ViewsTests && dotnet test test/SiteTests && dotnet test test/CMSTests",
     "test:dotnet:watch": "dotnet watch --project test/SiteTests test"
   },
   "devDependencies": {

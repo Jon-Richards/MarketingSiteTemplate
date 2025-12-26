@@ -1,0 +1,19 @@
+@inherits LayoutComponentBase
+@using Microsoft.AspNetCore.Components.Sections
+@using Microsoft.AspNetCore.Components.Web
+@namespace Views.Server.Layouts
+
+<HeadContent>
+    <SectionOutlet SectionName="Head" />
+</HeadContent>
+
+<header>
+    <SectionOutlet SectionName="Header" />
+</header>
+<main>
+    @Body
+</main>
+<footer>
+    <SectionOutlet SectionName="Footer" />
+</footer>
+<SectionOutlet SectionName="Scripts" />
