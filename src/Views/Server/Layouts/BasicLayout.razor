@@ -4,10 +4,11 @@
 @namespace Views.Server.Layouts
 
 <HeadContent>
+    <link rel="stylesheet" href="_content/Views/bundle/index.css" />
     <SectionOutlet SectionName="Head" />
 </HeadContent>
 
-<header>
+<header class="mx-auto w-full border border-red-700 py-2 columns-1 text-center md:text-left">
     <SectionOutlet SectionName="Header" />
 </header>
 <main>
@@ -16,4 +17,6 @@
 <footer>
     <SectionOutlet SectionName="Footer" />
 </footer>
+
+<script src="_content/Views/bundle/app.js"></script>
 <SectionOutlet SectionName="Scripts" />
