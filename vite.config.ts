@@ -5,7 +5,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  root: 'src/Views',
+  root: '.',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
@@ -19,9 +19,11 @@ export default defineConfig({
     outDir: path.resolve(__dirname, './src/Views/wwwroot/bundle'),
     emptyOutDir: true,
     rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'src/Views/Client/main.tsx')
+      },
       output: {
-        entryFileNames: 'app.js',
-        chunkFileNames: '[name].js',
+        entryFileNames: '[name].js',
         assetFileNames: '[name].[ext]',
       },
     },
