@@ -1,0 +1,17 @@
+@*
+    Ensures a block of content always renders within the safe area of the page,
+    including padding at appropriate breakpoints.
+*@
+
+@namespace Views.Server.Components
+
+<div class="w-full px-4 xl:px-0">
+    <div class="max-w-6xl mx-auto">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

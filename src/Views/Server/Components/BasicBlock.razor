@@ -1,0 +1,14 @@
+@using Views.Server.Components
+
+@namespace Views.Server.Components
+
+<ContentArea>
+    <div class="card mb-4">
+        @ChildContent
+    </div>
+</ContentArea>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

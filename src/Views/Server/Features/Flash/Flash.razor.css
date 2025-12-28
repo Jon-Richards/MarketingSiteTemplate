@@ -3,21 +3,63 @@
   overflow: hidden;
   transition: height 0.2s linear;
 }
-.flash--info > div {
-  background-color: var(--color-shadow-1);
-  color: #fff;
+.flash .flash__content {
+  border: thin solid;
 }
-.flash--warning > div {
-  background-color: rgb(255, 230, 0);
+.flash.flash--info .flash__content {
+  background-color: var(--color-info-1);
+  border-color: var(--color-info-2);
   color: #000;
+
+  @variant dark {
+    background-color: var(--color-info-5);
+    border-color: var(--color-info-4);
+    color: #fff;
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: var(--color-info-5);
+    border-color: var(--color-info-4);
+    color: #fff;
+  }
 }
-.flash--error > div {
-  background-color: #f00;
-  color: #fff;
+.flash.flash--warning .flash__content {
+  background-color: var(--color-warning-1);
+  border-color: var(--color-warning-2);
+  color: #000;
+
+  @variant dark {
+    background-color: var(--color-warning-5);
+    border-color: var(--color-warning-4);
+    color: #fff;
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: var(--color-warning-5);
+    border-color: var(--color-warning-4);
+    color: #fff;
+  }
 }
-.flash--open {
+.flash.flash--error .flash__content {
+  background-color: var(--color-error-1);
+  border-color: var(--color-error-2);
+  color: #000;
+
+  @variant dark {
+    background-color: var(--color-error-5);
+    border-color: var(--color-error-4);
+    color: #fff;
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: var(--color-error-5);
+    border-color: var(--color-error-4);
+    color: #fff;
+  }
+}
+.flash.flash--open {
   height: auto;
 }
-.flash--closed {
+.flash.flash--closed {
   height: 0;
 }

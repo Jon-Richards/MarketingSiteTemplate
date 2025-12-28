@@ -2,27 +2,25 @@
 
 @namespace Views.Server.Features
 
-<div class="w-full mb-4">
-    <header
-        class="
-            flex
-            flex-col
-            w-full
-            max-w-6xl
-            mx-auto
-            dark:bg-shadow-3
-            md:flex-row
-            md:columns-2
-        "
-    >
-        <div class="shrink text-center md:text-right">
-            @Heading
-        </div>
-        <div class="grow text-center md:text-right">
-            @Navigation
-        </div>
-    </header>
-</div>
+<header
+    class="
+        flex
+        flex-col
+        w-full
+        mx-auto
+        mb-4
+        p-4
+        md:flex-row
+        md:columns-2
+    "
+>
+    <div class="shrink text-center md:text-right">
+        @Heading
+    </div>
+    <div class="grow text-center md:text-right">
+        @Navigation
+    </div>
+</header>
 
 @code {
     [Parameter]

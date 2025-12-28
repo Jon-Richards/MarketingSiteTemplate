@@ -1,23 +1,46 @@
 @import "tailwindcss";
 
-@layer components {
-  /* Custom components go here */
-}
-
 @theme {
-  --color-shadow-1: var(--color-neutral-900);
-  --color-shadow-2: var(--color-neutral-800);
-  --color-shadow-3: var(--color-neutral-700);
+  --color-shadow-1: var(--color-neutral-950);
+  --color-shadow-2: var(--color-neutral-900);
+  --color-shadow-3: var(--color-neutral-800);
+  --color-shadow-4: var(--color-neutral-700);
+  --color-shadow-5: var(--color-neutral-600);
 
   --color-light-1: var(--color-stone-50);
   --color-light-2: var(--color-stone-100);
   --color-light-3: var(--color-stone-200);
+  --color-light-4: var(--color-stone-300);
+  --color-light-5: var(--color-stone-400);
 
-  --color-accent-1: var(--color-teal-700);
-  --color-accent-2: var(--color-teal-600);
-  --color-accent-3: var(--color-teal-500);
+  --color-accent-1: var(--color-teal-400);
+  --color-accent-2: var(--color-teal-500);
+  --color-accent-3: var(--color-teal-600);
 
-  --color-interactive-1: var(--color-cyan-700);
-  --color-interactive-2: var(--color-cyan-600);
-  --color-interactive-3: var(--color-cyan-500);
+  --color-interactive-1: var(--color-cyan-400);
+  --color-interactive-2: var(--color-cyan-500);
+  --color-interactive-3: var(--color-cyan-600);
+
+  --color-info-1: var(--color-slate-300);
+  --color-info-2: var(--color-slate-400);
+  --color-info-3: var(--color-slate-500);
+  --color-info-4: var(--color-slate-600);
+  --color-info-5: var(--color-slate-700);
+
+  --color-warning-1: var(--color-yellow-300);
+  --color-warning-2: var(--color-yellow-400);
+  --color-warning-3: var(--color-yellow-500);
+  --color-warning-4: var(--color-yellow-600);
+  --color-warning-5: var(--color-yellow-700);
+
+  --color-error-1: var(--color-red-300);
+  --color-error-2: var(--color-red-400);
+  --color-error-3: var(--color-red-500);
+  --color-error-4: var(--color-red-600);
+  --color-error-5: var(--color-red-700);
+}
+
+@layer components {
+  @import "./components/card.css";
+  @import "./components//headings.css";
 }

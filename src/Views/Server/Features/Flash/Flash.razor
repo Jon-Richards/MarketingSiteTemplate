@@ -1,29 +1,33 @@
+@using Views.Server.Components
 @namespace Views.Server.Features
 
-<div
-    class="
-        flex
-        columns-2
-        w-full
-        max-w-6xl
-        mx-auto
-        flash
-        flash--@Model.Modifier
-        flash--open
-    "
-    data-feature="flash"
->
-    <div class="flex columns-2 w-full mb-4 px-8 py-4 rounded-md text-center">
-        <div class="grow">
-            @ChildContent
-        </div>
-        @if (IsDismissible)
-        {
-            <div class="shrink">
-                <button type="button">x</button>
+<div class="flash flash--@Model.Modifier flash--open" data-feature="flash">
+    <ContentArea>
+        <div
+            class="
+                flash__content
+                flex
+                columns-2
+                max-w-6xl
+                mx-auto
+                mb-4
+                px-8
+                py-4
+                rounded-md
+                text-center
+            "
+        >
+            <div class="grow">
+                @ChildContent
             </div>
-        }
-    </div>
+            @if (IsDismissible)
+            {
+                <div class="shrink">
+                    <button type="button">x</button>
+                </div>
+            }
+        </div>
+    </ContentArea>
 </div>
 
 @code {
