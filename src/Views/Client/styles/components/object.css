@@ -1,0 +1,15 @@
+.object {
+  box-shadow:
+    0
+    calc(var(--spacing) * 2)
+    calc(var(--spacing) * 8)
+    var(--color-light-4);
+
+    @variant dark {
+
+    }
+
+    @media screen and (prefers-color-scheme: dark) {
+
+    }
+}
