@@ -3,3 +3,21 @@
 @layer components {
   /* Custom components go here */
 }
+
+@theme {
+  --color-shadow-1: var(--color-neutral-900);
+  --color-shadow-2: var(--color-neutral-800);
+  --color-shadow-3: var(--color-neutral-700);
+
+  --color-light-1: var(--color-stone-50);
+  --color-light-2: var(--color-stone-100);
+  --color-light-3: var(--color-stone-200);
+
+  --color-accent-1: var(--color-teal-700);
+  --color-accent-2: var(--color-teal-600);
+  --color-accent-3: var(--color-teal-500);
+
+  --color-interactive-1: var(--color-cyan-700);
+  --color-interactive-2: var(--color-cyan-600);
+  --color-interactive-3: var(--color-cyan-500);
+}

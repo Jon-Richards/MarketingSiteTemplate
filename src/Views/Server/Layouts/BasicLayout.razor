@@ -2,41 +2,30 @@
 @using Microsoft.AspNetCore.Components.Sections
 @using Microsoft.AspNetCore.Components.Web
 @using Views.Server.Components
+@using Views.Server.Features
 
 @namespace Views.Server.Layouts
 
 <HeadContent>
-    <link rel="stylesheet" href="_content/Views/bundle/index.css" />
+    <link rel="stylesheet" href="_content/Views/bundle/main.css" />
     <SectionOutlet SectionName="Head" />
 </HeadContent>
 
-<SectionOutlet SectionName="Flashes" />
 <div class="flex flex-col min-h-screen">
-    <header
-        class="
-            mx-auto
-            w-full
-            border
-            px-8
-            py-4
-            columns-1
-            md:columns-2 
-            text-center
-            md:text-left
-        "
-    >
-        <div>
-            <SectionOutlet SectionName="Header" />
-        </div>
-        <div class="hidden md:block md:text-right">
-            Navigation
-        </div>
-    </header>
+    <PageHeader>
+        <Heading>
+            <SectionOutlet SectionName="Heading" />
+        </Heading>
+        <Navigation>
+            <SectionOutlet SectionName="Navigation" />
+        </Navigation>
+    </PageHeader>
+    <SectionOutlet SectionName="Flashes" />
     <main class="grow">
         @Body
     </main>
     <PageFooter />
 </div>
 
-<script src="_content/Views/bundle/app.js"></script>
+<script src="_content/Views/bundle/main.js"></script>
 <SectionOutlet SectionName="Scripts" />
