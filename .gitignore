@@ -10,6 +10,9 @@
 # Editors
 .vscode/
 
+# OSX
+.DS_Store
+
 # AI prompts and context
 /agents/session/*
 !/agents/session/.gitkeep
