@@ -4,8 +4,11 @@
  */
 .card {
   border: thin solid;
-  border-radius: var(--spacing);
-  padding: calc(8 * var(--spacing));
+  border-radius: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 8);
+
+  background-color: var(--color-light-2);
+  border-color: var(--color-light-1);
 
   @variant dark {
     background-color: var(--color-shadow-2);
@@ -16,4 +19,9 @@
     background-color: var(--color-shadow-2);
     border-color: var(--color-shadow-3);
   }
+}
+
+.card.card--transparent {
+  border: none;
+  background: transparent;
 }

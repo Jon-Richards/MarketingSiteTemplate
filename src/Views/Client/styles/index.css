@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@font-face {
+  font-display: swap;
+  font-family: 'Outfit';
+  font-weight: 100 900;
+  src: url('/_content/Views/Outfit-VariableFont_wght.ttf');
+}
+
 @theme {
   --color-shadow-1: var(--color-neutral-950);
   --color-shadow-2: var(--color-neutral-900);
@@ -38,9 +45,13 @@
   --color-error-3: var(--color-red-500);
   --color-error-4: var(--color-red-600);
   --color-error-5: var(--color-red-700);
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-copy: 'Outfit', sans-serif;
 }
 
 @layer components {
+  @import "./components/object.css";
   @import "./components/card.css";
   @import "./components//headings.css";
 }
