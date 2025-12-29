@@ -65,10 +65,36 @@
 
 <SectionBlock Id="approach" Heading="Approach" WithOverview="false">
     <Content>
-        <div class="card object">
-            <p>
-                This is about the general approach.
-            </p>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div class="card object copy col-span-1 md:col-span-2">
+                <h3 class="heading heading-3">
+                    Overview
+                </h3>
+                <p>
+                    The guide uses a combination of server rendered components
+                    (Blazor), React, and CSS components via Tailwind.
+                </p>
+                <hr class="hr">
+                <h3 class="heading heading-3">
+                    When To Use Which Component Style
+                </h3>
+                <p>
+                    If your component only needs a single HTML tag, consider using
+                    a CSS component.  The are generally the most composable and used
+                    both in and out of the Views project.
+                </p>
+                <p>
+                    If your component needs multiple HTML tags, conditional
+                    rendering, but does not rich interactivity beyond its initial
+                    render, consider using a Blazor component (.razor).  These offer
+                    the flexibility of client side components but render server
+                    side, making them slightly better for SEO.
+                </p>
+                <p>
+                    If your component has multiple HTML tags and rich interactivity,
+                    consider using a React component.
+                </p>
+            </div>
         </div>
     </Content>
 </SectionBlock>

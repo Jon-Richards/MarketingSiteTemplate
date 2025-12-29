@@ -56,4 +56,5 @@
   @import "./components//headings.css";
   @import "./components/hr.css";
   @import "./components//sub-heading.css";
+  @import "./components/copy.css";
 }

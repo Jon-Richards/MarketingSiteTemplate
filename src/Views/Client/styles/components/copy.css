@@ -1,0 +1,8 @@
+.copy p {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  margin-bottom: calc(var(--spacing) * 6);
+}
+.copy p:last-child {
+  margin-bottom: 0;
+}

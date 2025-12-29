@@ -1,0 +1,24 @@
+@namespace Views.Server.Components
+
+<a href="@Href" target="@Target" class="block">
+    <div class="card">
+        @ChildContent
+    </div>
+</a>
+
+@code {
+    [Parameter]
+    public string BackgroundType { get; set; } = "none";
+
+    [Parameter]
+    public string BackgroundURL { get; set; } = "";
+
+    [Parameter]
+    public string Href { get; set; }
+
+    [Parameter]
+    public string Target { get; set; } = "_self";
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
