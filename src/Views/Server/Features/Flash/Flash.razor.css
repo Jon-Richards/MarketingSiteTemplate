@@ -1,7 +1,14 @@
 .flash {
   height: auto;
   overflow: hidden;
+  margin: calc(var(--spacing) * 4) 0;
   transition: height 0.2s linear;
+}
+.flash:first-of-type {
+  margin-top: calc(var(--spacing) * 16);
+}
+.flash:last-of-type {
+  margin-bottom: calc(var(--spacing) * 16);
 }
 .flash .flash__content {
   border: thin solid;
@@ -56,10 +63,4 @@
     border-color: var(--color-error-4);
     color: #fff;
   }
-}
-.flash.flash--open {
-  height: auto;
-}
-.flash.flash--closed {
-  height: 0;
 }

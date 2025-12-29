@@ -59,7 +59,7 @@ describe('initializeFlashes', () => {
     expect(clickHandled).toBe(true);
   });
 
-  it('removes flash--open class when close button is clicked', () => {
+  it('removes flash element when close button is clicked', () => {
     const flash = document.createElement('div');
     flash.setAttribute('data-feature', 'flash');
     flash.classList.add('flash--open');
@@ -67,16 +67,17 @@ describe('initializeFlashes', () => {
     flash.appendChild(button);
     container.appendChild(flash);
 
+    expect(container.contains(flash)).toBe(true);
+
     initializeFlashes();
     button.click();
 
-    expect(flash.classList.contains('flash--open')).toBe(false);
+    expect(container.contains(flash)).toBe(false);
   });
 
-  it('adds flash--closed class when close button is clicked', () => {
+  it('removes flash from DOM when close button is clicked', () => {
     const flash = document.createElement('div');
     flash.setAttribute('data-feature', 'flash');
-    flash.classList.add('flash--open');
     const button = document.createElement('button');
     flash.appendChild(button);
     container.appendChild(flash);
@@ -84,7 +85,7 @@ describe('initializeFlashes', () => {
     initializeFlashes();
     button.click();
 
-    expect(flash.classList.contains('flash--closed')).toBe(true);
+    expect(document.body.contains(flash)).toBe(false);
   });
 
   it('ignores non-button elements when setting up close handler', () => {
@@ -102,14 +103,12 @@ describe('initializeFlashes', () => {
   it('handles multiple flash components independently', () => {
     const flash1 = document.createElement('div');
     flash1.setAttribute('data-feature', 'flash');
-    flash1.classList.add('flash--open');
     const button1 = document.createElement('button');
     flash1.appendChild(button1);
     container.appendChild(flash1);
 
     const flash2 = document.createElement('div');
     flash2.setAttribute('data-feature', 'flash');
-    flash2.classList.add('flash--open');
     const button2 = document.createElement('button');
     flash2.appendChild(button2);
     container.appendChild(flash2);
@@ -117,7 +116,7 @@ describe('initializeFlashes', () => {
     initializeFlashes();
     button1.click();
 
-    expect(flash1.classList.contains('flash--closed')).toBe(true);
-    expect(flash2.classList.contains('flash--open')).toBe(true);
+    expect(container.contains(flash1)).toBe(false);
+    expect(container.contains(flash2)).toBe(true);
   });
 });

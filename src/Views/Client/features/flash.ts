@@ -23,9 +23,6 @@ class Flash {
   }
 
   handleClick() {
-    if (this.element.classList.contains('flash--open')) {
-      this.element.classList.remove('flash--open');
-      this.element.classList.add('flash--closed');
-    }
+    this.element.remove();
   }
 }
