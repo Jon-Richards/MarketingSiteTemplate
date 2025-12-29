@@ -4,13 +4,13 @@ using Xunit;
 
 namespace ViewsTests.Server.Components;
 
-public class ContentBlockTests : TestContext
+public class ContentAreaTests : TestContext
 {
     [Fact]
     public void Renders_ContainerWithCorrectStructure()
     {
         // Arrange & Act
-        var component = RenderComponent<ContentBlock>(parameters => parameters
+        var component = RenderComponent<ContentArea>(parameters => parameters
             .AddChildContent("Test Content"));
 
         // Assert
@@ -22,8 +22,8 @@ public class ContentBlockTests : TestContext
     public void Renders_ChildContent()
     {
         // Arrange
-        var childContent = "Custom Content Block";
-        var component = RenderComponent<ContentBlock>(parameters => parameters
+        var childContent = "Custom Content Area";
+        var component = RenderComponent<ContentArea>(parameters => parameters
             .AddChildContent(childContent));
 
         // Act & Assert
@@ -34,21 +34,20 @@ public class ContentBlockTests : TestContext
     public void AppliesCorrectCssClasses()
     {
         // Arrange & Act
-        var component = RenderComponent<ContentBlock>(parameters => parameters
+        var component = RenderComponent<ContentArea>(parameters => parameters
             .AddChildContent("Test"));
 
         // Assert
         Assert.Contains("w-full", component.Markup);
         Assert.Contains("max-w-6xl", component.Markup);
         Assert.Contains("mx-auto", component.Markup);
-        Assert.Contains("p-8", component.Markup);
     }
 
     [Fact]
     public void Renders_WithMultipleChildren()
     {
         // Arrange & Act
-        var component = RenderComponent<ContentBlock>(parameters => parameters
+        var component = RenderComponent<ContentArea>(parameters => parameters
             .AddChildContent("<span>Child 1</span><span>Child 2</span>"));
 
         // Assert

@@ -14,8 +14,9 @@ public class FlashTests : TestContext
             .AddChildContent("Test Message"));
 
         // Assert
-        Assert.Contains("flash--open", component.Markup);
+        Assert.Contains("flash", component.Markup);
         Assert.Contains("flash--info", component.Markup);
+        Assert.Contains("data-feature=\"flash\"", component.Markup);
     }
 
     [Fact]

@@ -43,12 +43,11 @@ public class PageFooterTests : TestContext
         var component = RenderComponent<PageFooter>();
 
         // Assert
-        Assert.Contains("w-full", component.Markup);
-        Assert.Contains("border", component.Markup);
-        Assert.Contains("max-w-6xl", component.Markup);
-        Assert.Contains("mx-auto", component.Markup);
-        Assert.Contains("p-8", component.Markup);
+        Assert.Contains("bg-light-1", component.Markup);
+        Assert.Contains("dark:bg-shadow-1", component.Markup);
         Assert.Contains("text-center", component.Markup);
+        Assert.Contains("py-8", component.Markup);
+        Assert.Contains("mb-2", component.Markup);
     }
 
     [Fact]
