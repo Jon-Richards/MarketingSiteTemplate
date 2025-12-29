@@ -13,15 +13,30 @@
   @variant dark {
     background-color: var(--color-shadow-2);
     border-color: var(--color-shadow-3);
+    box-shadow: none;
   }
 
   @media (prefers-color-scheme: dark) {
     background-color: var(--color-shadow-2);
     border-color: var(--color-shadow-3);
+    box-shadow: none;
+  }
+}
+
+.card.card--skeletal {
+  background: transparent;
+  border-color: var(--color-shadow-1);
+
+  @variant dark {
+    border-color: var(--color-light-5);
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    border-color: var(--color-light-5);
   }
 }
 
 .card.card--transparent {
-  border: none;
   background: transparent;
+  border: none;
 }

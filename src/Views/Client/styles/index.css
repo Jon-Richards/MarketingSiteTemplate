@@ -54,4 +54,6 @@
   @import "./components/object.css";
   @import "./components/card.css";
   @import "./components//headings.css";
+  @import "./components/hr.css";
+  @import "./components//sub-heading.css";
 }
