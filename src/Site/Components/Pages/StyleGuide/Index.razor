@@ -11,15 +11,6 @@
 </SectionContent>
 
 <SectionContent SectionName="Flashes">
-    <Flash Level="info">
-        Test
-    </Flash>
-    <Flash Level="warning">
-        Test
-    </Flash>
-    <Flash Level="error">
-        Test
-    </Flash>
 </SectionContent>
 
 <SectionContent SectionName="Heading">
@@ -39,21 +30,18 @@
         </p>
     </Overview>
     <Content>
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
             <div class="card object">
                 <a href="#approach">Approach</a>
-            </div>
-            <div class="card object">
-                <a href="#conventions">Conventions</a>
             </div>
             <div class="card object">
                 <a href="#features">Features</a>
             </div>
             <div class="card object">
-                <a href="#components">Components</a>
+                <a href="#server-components">Server Components</a>
             </div>
             <div class="card object">
-                <a href="#styles">Styles</a>
+                <a href="#css-components">CSS Components</a>
             </div>
         </div>
     </Content>
@@ -65,7 +53,7 @@
 
 <SectionBlock Id="approach" Heading="Approach" WithOverview="false">
     <Content>
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div class="grid gap-4 grid-cols-1 md:grid-cols-3">
             <div class="card object copy col-span-1 md:col-span-2">
                 <h3 class="heading heading-3">
                     Overview
@@ -103,61 +91,64 @@
     <hr class="hr my-0" />
 </ContentArea>
 
-<SectionBlock Id="headings" Heading="Headings" WithOverview="false">
-    <div class="card object">
-        <h1 class="heading heading-1">
-            This is a heading 1.
-        </h1>
-        <h2 class="heading heading-2">
-            This is a heading 2.
-        </h2>
-        <h3 class="heading heading-3">
-            This is a heading 3.
-        </h3>
-        <h4 class="heading heading-4">
-            This is a heading 4.
-        </h4>
-    </div>
+<SectionBlock Id="features" Heading="Features">
+    <Overview>
+        <p class="sub-heading">
+            Non-trivial arrangements of components with additional functionality, ready to be
+            included on any page.
+        </p>
+    </Overview>
+    <Content>
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+            <div class="card object">Flash</div>
+            <div class="card object">Page Header</div>
+            <div class="card object">Page Footer</div>
+            <div class="card object">Section Block</div>
+        </div>
+    </Content>
 </SectionBlock>
 
 <ContentArea>
-    <hr class="hr" />
+    <hr class="hr my-0" />
 </ContentArea>
 
-<BasicBlock>
-    <h1 class="heading heading-1">
-        This is a heading 1.
-    </h1>
-    <h2 class="heading heading-2">
-        This is a heading 2.
-    </h2>
-    <h3 class="heading heading-3">
-        This is a heading 3.
-    </h3>
-    <h4 class="heading heading-4">
-        This is a heading 4.
-    </h4>
-    <hr class="hr" />
-    <p>
-        This is body content.
-    </p>
-    <h2 class="heading heading-2">
-        Some project to highlight
-    </h2>
-    <p class="sub-heading">
-        This is a description or brief blurb about whatever is being described.
-    </p>
-</BasicBlock>
-<BasicBlock>
-    <p>
-        This is a second content block.
-    </p>
-</BasicBlock>
-<BasicBlock>
-    <p>
-        This is a second content block.
-    </p>
-</BasicBlock>
+<SectionBlock Id="server-components" Heading="Server Components">
+    <Overview>
+        <p class="sub-heading">
+            Declarative HTML snippets that render on the server, making them a
+            good choice for when SEO counts.
+        </p>
+    </Overview>
+    <Content>
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+            <div class="card object">Content Area</div>
+            <div class="card object">Card Link</div>
+        </div>
+    </Content>
+</SectionBlock>
+
+<ContentArea>
+    <hr class="hr my-0" />
+</ContentArea>
+
+<SectionBlock id="css-components" Heading="CSS Components">
+    <Overview>
+        <p class="sub-heading">
+            Granular CSS classes, built on top of Tailwind, for describing
+            styles in a deeply composable way.
+        </p>
+    </Overview>
+    <Content>
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+            <div class="card object">Card</div>
+            <div class="card object">Copy</div>
+            <div class="card object">Heading</div>
+            <div class="card object">Horizontal Rule</div>
+            <div class="card object">Object</div>
+            <div class="card object">Sub-Heading</div>
+        </div>
+    </Content>
+</SectionBlock>
 
 <SectionContent SectionName="Footer">
     <div>This is footer content.</div>

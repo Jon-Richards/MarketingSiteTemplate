@@ -7,7 +7,7 @@
   border-radius: calc(var(--spacing) * 2);
   padding: calc(var(--spacing) * 8);
 
-  background-color: var(--color-light-2);
+  background-color: var(--color-light-1);
   border-color: var(--color-light-3);
 
   @variant dark {
