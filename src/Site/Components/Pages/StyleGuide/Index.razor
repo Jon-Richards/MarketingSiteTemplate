@@ -79,20 +79,20 @@
                     When To Use Which Component Style
                 </h3>
                 <p>
-                    If your component only needs a single HTML tag, consider using
-                    a CSS component.  The are generally the most composable and used
-                    both in and out of the Views project.
+                    If your component only needs a single HTML tag, consider writing
+                    a CSS component.  These are generally the most granular, and used
+                    both as part of larger components and in static content.
                 </p>
                 <p>
-                    If your component needs multiple HTML tags, conditional
-                    rendering, but does not rich interactivity beyond its initial
+                    If your component needs multiple HTML tags and conditional
+                    rendering, but does not require rich interactivity beyond its initial
                     render, consider using a Blazor component (.razor).  These offer
-                    the flexibility of client side components but render server
-                    side, making them slightly better for SEO.
+                    the flexibility of client side components but render server side, making them
+                    slightly better for SEO.
                 </p>
                 <p>
-                    If your component has multiple HTML tags and rich interactivity,
-                    consider using a React component.
+                    If your component is part of a feature with rich interactivity, consider writing
+                    it in React.
                 </p>
             </div>
         </div>
