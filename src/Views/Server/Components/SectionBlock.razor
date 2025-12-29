@@ -1,0 +1,65 @@
+@using Views.Server.Components
+
+@namespace Views.Server.Components
+
+<ContentArea>
+    <section id="@Id">
+        <div class="@(!WithOverview ? "mb-4" : "")">
+            @((MarkupString)BuildHeading(Heading, HeadingLevel))
+        </div>
+        @if (WithOverview) {
+            <div class="flex flex-col columns-2 gap-8 mb-8 lg:flex-row">
+                <div class="basis-[50%]">
+                    @Overview
+                </div>
+                <div class="basis-[50%]">
+                    @Visual
+                </div>
+            </div>
+        }
+        @if (WithContent) {
+            <div>
+                @Content
+            </div>
+        }
+    </section>
+    @if (WithRule == true) {
+        <hr class="hr my-16">
+    }
+</ContentArea>
+
+@code{
+    [Parameter]
+    public string Id { get; set; }
+
+    [Parameter]
+    public string Heading { get; set; }
+
+    [Parameter]
+    public int HeadingLevel { get; set; } = 2;
+
+    [Parameter]
+    public RenderFragment Overview { get; set; }
+
+    [Parameter]
+    public RenderFragment Visual { get; set; }
+
+    [Parameter]
+    public RenderFragment Content { get; set; }
+
+    [Parameter]
+    public bool WithOverview { get; set; } = true;
+
+    [Parameter]
+    public bool WithContent { get; set; } = true;
+
+    [Parameter]
+    public bool WithRule { get; set; } = true;
+
+    public string BuildHeading(string heading, int level) {
+        return
+            $"<h{level} class=\"heading heading-{level} heading-top\">" +
+            $"  {heading}" +
+            $"</h{level}>";
+    }
+}

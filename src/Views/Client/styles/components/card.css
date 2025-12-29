@@ -8,7 +8,7 @@
   padding: calc(var(--spacing) * 8);
 
   background-color: var(--color-light-2);
-  border-color: var(--color-light-1);
+  border-color: var(--color-light-3);
 
   @variant dark {
     background-color: var(--color-shadow-2);

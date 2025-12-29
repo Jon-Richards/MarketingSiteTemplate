@@ -1,8 +1,8 @@
 .object {
   box-shadow:
     0
+    var(--spacing)
     calc(var(--spacing) * 2)
-    calc(var(--spacing) * 4)
     var(--color-light-4);
 
     @variant dark {

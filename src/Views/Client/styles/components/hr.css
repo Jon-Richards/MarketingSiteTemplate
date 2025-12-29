@@ -1,12 +1,12 @@
 .hr {
-  color: var(--color-shadow-1);
+  color: var(--color-light-4);
   margin: calc(var(--spacing) * 8) 0;
 
   @variant dark {
-    border-color: var(--color-shadow-3);
+    border-color: var(--color-shadow-5);
   }
 
   @media screen and (prefers-color-scheme: dark) {
-    border-color: var(--color-shadow-3);
+    border-color: var(--color-shadow-4);
   }
 }
