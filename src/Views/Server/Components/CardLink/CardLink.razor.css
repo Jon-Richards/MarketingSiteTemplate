@@ -1,0 +1,19 @@
+.card-link {
+  display: inline-block;
+}
+
+.card-link .card {
+  color: var(--color-interactive-3);
+  font-size: calc(var(--spacing) * 5);
+  font-weight: bold;
+  padding: calc(var(--spacing) * 4);
+  transition:
+    background-color 0.1s linear,
+    color 0.1s linear;
+}
+
+.card-link:hover .card,
+.card-link:focus .card {
+  background-color: var(--color-shadow-3);
+  color: var(--color-interactive-1);
+}
