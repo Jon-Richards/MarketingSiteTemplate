@@ -6,3 +6,96 @@
 .copy p:last-child {
   margin-bottom: 0;
 }
+
+.copy ul {
+  list-style-type: square;
+  padding-left: calc(var(--spacing) * 4);
+  margin-left: calc(var(--spacing) * 1);
+}
+
+.copy ul li {
+  padding-left: calc(var(--spacing) * 2.5);
+}
+
+.copy ol {
+  list-style-type: decimal;
+  padding-left: calc(var(--spacing) * 4);
+  margin-left: calc(var(--spacing) * 1.5);
+}
+
+.copy ol li {
+  padding-left: calc(var(--spacing) * 2);
+}
+
+.copy li {
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+.copy li::before {
+  color: var(--color-accent-2);
+}
+
+.copy ul.emoji {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.copy ul.emoji li {
+  padding-left: 0;
+  position: relative;
+  margin-left: calc(var(--spacing) * 3);
+}
+
+.copy ul.emoji li::before {
+  display: inline-block;
+  left: calc(var(--spacing) * -6);
+  position: absolute;
+}
+
+.copy ul.emoji li.check::before {
+  content: "\2713";
+}
+
+.copy ul.emoji li.checkmark::before {
+  content: "\2713";
+}
+
+.copy ul.emoji li.x::before {
+  content: "\2717";
+}
+
+.copy ul.emoji li.times::before {
+  content: "\2715";
+}
+
+.copy ul.emoji li.star::before {
+  content: "\2605";
+}
+
+.copy ul.emoji li.plus::before {
+  content: "\ff0b";
+}
+
+.copy ul.emoji li.minus::before {
+  content: "\2212";
+}
+
+.copy ul.emoji li.arrow::before {
+  content: "\2192";
+}
+
+.copy ul.emoji li.bullet::before {
+  content: "\2022";
+}
+
+.copy ul.emoji li.thumbs-up::before {
+  content: "\1F44D";
+}
+
+.copy ul.emoji li.thumbs-down::before {
+  content: "\1F44E";
+}
+
+.copy ul.emoji li.heart::before {
+  content: "\2665";
+}
