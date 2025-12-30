@@ -1,4 +1,7 @@
+@using Views.Server.Components
+@using Views.Server.Components.Icons
 @using Views.Server.Features
+@using Site.Components.Pages.StyleGuide
 
 @namespace Site.Components.Pages.StyleGuide.ServerComponents
 
@@ -12,7 +15,9 @@
     <ChildContent>
         <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
             <div class="card object">Content Area</div>
-            <div class="card object">Card Link</div>
+            <DocLink Href="/style-guide/server-components/card-link">
+                Card Link
+            </DocLink>
         </div>
     </ChildContent>
 </SectionBlock>

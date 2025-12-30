@@ -32,18 +32,18 @@
     </Overview>
     <ChildContent>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
-            <CardLink Href="#design-guidelines" Class="object">
+            <DocLink Href="#design-guidelines">
                 Design Guidelines
-            </CardLink>
-            <CardLink Href="#features" Class="object">
+            </DocLink>
+            <DocLink Href="#features">
                 Features
-            </CardLink>
-            <CardLink Href="#server-components" Class="object">
+            </DocLink>
+            <DocLink Href="#server-components">
                 Server Components
-            </CardLink>
-            <CardLink Href="#css-components" Class="object">
+            </DocLink>
+            <DocLink Href="#css-components">
                 CSS Components
-            </CardLink>
+            </DocLink>
         </div>
     </ChildContent>
 </SectionBlock>
@@ -98,32 +98,19 @@
     <hr class="hr my-0" />
 </ContentArea>
 
-<Site.Components.Pages.StyleGuide.Features._Overview Id="features" />
+<Site.Components.Pages.StyleGuide.Features.Overview Id="features" />
 
 <ContentArea>
     <hr class="hr my-0" />
 </ContentArea>
 
-<SectionBlock Id="server-components" Heading="Server Components">
-    <Overview>
-        <p class="sub-heading">
-            Declarative HTML snippets that render on the server, making them a
-            good choice for when SEO counts.
-        </p>
-    </Overview>
-    <ChildContent>
-        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
-            <div class="card object">Content Area</div>
-            <div class="card object">Card Link</div>
-        </div>
-    </ChildContent>
-</SectionBlock>
+<Site.Components.Pages.StyleGuide.ServerComponents.Overview Id="server-components" />
 
 <ContentArea>
     <hr class="hr my-0" />
 </ContentArea>
 
-<Site.Components.Pages.StyleGuide.CSSComponents._Overview Id="css-components" />
+<Site.Components.Pages.StyleGuide.CSSComponents.Overview Id="css-components" />
 
 <SectionContent SectionName="Footer">
     <div>This is footer content.</div>
