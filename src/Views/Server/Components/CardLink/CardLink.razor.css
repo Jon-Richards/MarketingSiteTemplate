@@ -1,19 +1,57 @@
 .card-link {
+  color: var(--color-interactive-3);
   display: inline-block;
 }
 
+.card-link:hover,
+.card-link:focus {
+  outline: none;
+}
+
 .card-link .card {
-  color: var(--color-interactive-3);
-  font-size: calc(var(--spacing) * 5);
+  border-color: var(--color-interactive-3);
   font-weight: bold;
   padding: calc(var(--spacing) * 4);
   transition:
     background-color 0.1s linear,
+    border-color 0.1s linear,
     color 0.1s linear;
+
+  @variant dark {
+    border-color: var(--color-interactive-5);
+  }
+  
+  @media screen and (prefers-color-scheme: dark) {
+    border-color: var(--color-interactive-5);
+  }
 }
 
 .card-link:hover .card,
 .card-link:focus .card {
-  background-color: var(--color-shadow-3);
-  color: var(--color-interactive-1);
+  box-shadow: 0 0 0 calc(var(--spacing) * 0.25) var(--color-interactive-3);
+
+  @variant dark {
+    background-color: var(--color-shadow-3);
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: var(--color-shadow-3);
+  }
+}
+
+.card-link:hover .card.object,
+.card-link:focus .card.object {
+  box-shadow:
+    0 0 0 calc(var(--spacing) * 0.25) var(--color-interactive-3),
+    0 var(--spacing) calc(var(--spacing) * 4) var(--color-light-4);
+
+  @variant dark {
+    box-shadow:
+      0 0 0 calc(var(--spacing) * 0.25) var(--color-interactive-3);
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    box-shadow:
+      0 0 0 calc(var(--spacing) * 0.25) var(--color-interactive-3);
+  }
 }
