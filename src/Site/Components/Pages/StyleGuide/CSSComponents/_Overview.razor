@@ -1,0 +1,29 @@
+@using Views.Server.Features
+
+@namespace Site.Components.Pages.StyleGuide.CSSComponents
+
+<SectionBlock Id="@Id" Heading="CSS Components" HeadingLevel="@HeadingLevel">
+    <Overview>
+        <p class="sub-heading">
+            Modular CSS utility classes for describing look and feel.
+        </p>
+    </Overview>
+    <ChildContent>
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+            <div class="card object">Card</div>
+            <div class="card object">Copy</div>
+            <div class="card object">Headings</div>
+            <div class="card object">Horizontal Rule</div>
+            <div class="card object">Object</div>
+            <div class="card object">Sub-Heading</div>
+        </div>
+    </ChildContent>
+</SectionBlock>
+
+@code {
+    [Parameter]
+    public required string Id { get; set; }
+
+    [Parameter]
+    public int HeadingLevel { get; set; } = 2;
+}

@@ -1,0 +1,27 @@
+@using Views.Server.Features
+
+@namespace Site.Components.Pages.StyleGuide.Features
+
+<SectionBlock Id="@Id" Heading="Features" HeadingLevel="@HeadingLevel">
+    <Overview>
+        <p class="sub-heading">
+            Non-trivial arrangements of components with additional functionality.
+        </p>
+    </Overview>
+    <ChildContent>
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+            <div class="card object">Flash</div>
+            <div class="card object">Page Header</div>
+            <div class="card object">Page Footer</div>
+            <div class="card object">Section Block</div>
+        </div>
+    </ChildContent>
+</SectionBlock>
+
+@code {
+    [Parameter]
+    public required string Id { get; set; }
+
+    [Parameter]
+    public int HeadingLevel { get; set; } = 2;
+}

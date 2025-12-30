@@ -3,6 +3,7 @@
 @using Views.Server.Components
 @using Views.Server.Features
 @using Views.Server.Layouts
+@using Site.Components.Pages.StyleGuide
 @layout BasicLayout
 
 <SectionContent SectionName="Head">
@@ -32,7 +33,7 @@
     <ChildContent>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
             <div class="card object">
-                <a href="#approach">Approach</a>
+                <a href="#design-guidelines">Design Guidelines</a>
             </div>
             <div class="card object">
                 <a href="#features">Features</a>
@@ -51,9 +52,9 @@
     <hr class="hr my-0" />
 </ContentArea>
 
-<SectionBlock Id="approach" Heading="Approach" WithOverview="false">
+<SectionBlock Id="design-guidelines" Heading="Design Guidelines" WithOverview="false">
     <ChildContent>
-        <div class="grid gap-4 grid-cols-1 md:grid-cols-3">
+        <div class="grid gap-4 grid-cols-1 mb-8 md:grid-cols-3">
             <div class="card object copy col-span-1 md:col-span-2">
                 <h3 class="heading heading-3">
                     Overview
@@ -84,6 +85,12 @@
                 </p>
             </div>
         </div>
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+            <div class="card object">Layout</div>
+            <div class="card object">Colors</div>
+            <div class="card object">Typography</div>
+            <div class="card object">Components</div>
+        </div>
     </ChildContent>
 </SectionBlock>
 
@@ -91,21 +98,7 @@
     <hr class="hr my-0" />
 </ContentArea>
 
-<SectionBlock Id="features" Heading="Features">
-    <Overview>
-        <p class="sub-heading">
-            Non-trivial arrangements of components with additional functionality.
-        </p>
-    </Overview>
-    <ChildContent>
-        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
-            <div class="card object">Flash</div>
-            <div class="card object">Page Header</div>
-            <div class="card object">Page Footer</div>
-            <div class="card object">Section Block</div>
-        </div>
-    </ChildContent>
-</SectionBlock>
+<Site.Components.Pages.StyleGuide.Features._Overview Id="features" />
 
 <ContentArea>
     <hr class="hr my-0" />
@@ -130,24 +123,7 @@
     <hr class="hr my-0" />
 </ContentArea>
 
-<SectionBlock id="css-components" Heading="CSS Components">
-    <Overview>
-        <p class="sub-heading">
-            Granular CSS classes, built on top of Tailwind, for describing
-            styles in a deeply composable way.
-        </p>
-    </Overview>
-    <ChildContent>
-        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
-            <div class="card object">Card</div>
-            <div class="card object">Copy</div>
-            <div class="card object">Heading</div>
-            <div class="card object">Horizontal Rule</div>
-            <div class="card object">Object</div>
-            <div class="card object">Sub-Heading</div>
-        </div>
-    </ChildContent>
-</SectionBlock>
+<Site.Components.Pages.StyleGuide.CSSComponents._Overview Id="css-components" />
 
 <SectionContent SectionName="Footer">
     <div>This is footer content.</div>
