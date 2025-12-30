@@ -20,13 +20,17 @@
   --color-light-4: var(--color-stone-300);
   --color-light-5: var(--color-stone-400);
 
-  --color-accent-1: var(--color-teal-400);
-  --color-accent-2: var(--color-teal-500);
-  --color-accent-3: var(--color-teal-600);
+  --color-accent-1: var(--color-teal-300);
+  --color-accent-2: var(--color-teal-400);
+  --color-accent-3: var(--color-teal-500);
+  --color-accent-4: var(--color-teal-600);
+  --color-accent-5: var(--color-teal-700);
 
-  --color-interactive-1: var(--color-cyan-400);
-  --color-interactive-2: var(--color-cyan-500);
-  --color-interactive-3: var(--color-cyan-600);
+  --color-interactive-1: var(--color-teal-100);
+  --color-interactive-2: var(--color-teal-300);
+  --color-interactive-3: var(--color-teal-500);
+  --color-interactive-4: var(--color-teal-700);
+  --color-interactive-5: var(--color-teal-900);
 
   --color-info-1: var(--color-slate-300);
   --color-info-2: var(--color-slate-400);
