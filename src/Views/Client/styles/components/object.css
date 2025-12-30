@@ -6,10 +6,18 @@
     var(--color-light-4);
 
   @variant dark {
-    box-shadow: none;
+    box-shadow:
+      0
+      var(--spacing)
+      calc(var(--spacing) * 4)
+      var(--color-shadow-1);
   }
 
   @media screen and (prefers-color-scheme: dark) {
-    box-shadow: none;
+    box-shadow:
+      0
+      var(--spacing)
+      calc(var(--spacing) * 4)
+      var(--color-shadow-1);
   }
 }
