@@ -8,10 +8,10 @@
 }
 
 @theme {
-  --color-shadow-1: oklch(17% 0 0); /* default oklch(14.5%) */
-  --color-shadow-2: var(--color-neutral-900);
-  --color-shadow-3: oklch(32% 0 0); /* default oklch(26.9% 0 0) */
-  --color-shadow-4: var(--color-neutral-700);
+  --color-shadow-1: oklch(19% 0 0); /* default oklch(14.5% 0 0) */
+  --color-shadow-2: oklch(23% 0 0); /* default oklch(20.5% 0 0) */
+  --color-shadow-3: var(--color-neutral-800); /* oklch(26.9% 0 0) */
+  --color-shadow-4: oklch(32% 0 0); /* default  oklch(37.1% 0 0) */
   --color-shadow-5: var(--color-neutral-600);
 
   --color-light-1: var(--color-stone-50);
