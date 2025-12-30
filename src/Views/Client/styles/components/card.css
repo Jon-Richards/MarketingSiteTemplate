@@ -13,13 +13,11 @@
   @variant dark {
     background-color: var(--color-shadow-2);
     border-color: var(--color-shadow-3);
-    box-shadow: none;
   }
 
   @media (prefers-color-scheme: dark) {
     background-color: var(--color-shadow-2);
     border-color: var(--color-shadow-3);
-    box-shadow: none;
   }
 }
 
