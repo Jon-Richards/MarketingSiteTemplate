@@ -1,0 +1,51 @@
+@page "/style-guide/card-link"
+@using Microsoft.AspNetCore.Components.Sections
+@using Views.Server.Components
+@using Views.Server.Features
+@using Views.Server.Layouts
+@layout BasicLayout
+
+<SectionContent SectionName="Head">
+    <meta name="description" content="A card component that functions like a link." />
+    <title>Style Guide - Card Link</title>
+</SectionContent>
+
+<SectionContent SectionName="Flashes">
+</SectionContent>
+
+<SectionContent SectionName="Heading">
+    Heading
+</SectionContent>
+
+<SectionContent SectionName="Navigation">
+    Navigation Content
+</SectionContent>
+
+<SectionBlock Id="overview" Heading="Card Link" HeadingLevel="1" WithContent="false">
+    <Overview>
+        <p class="sub-heading">
+            Card Links appear as CSS Card components, but the entire card is a
+            clickable link.
+        </p>
+    </Overview>
+</SectionBlock>
+
+<ContentArea>
+    <hr class="my-0" />
+</ContentArea>
+
+<SectionBlock Id="example-1" Heading="Example 1">
+    <Overview>
+        <p class="sub-heading">
+            Card Links appear as CSS Card components, but the entire card is a
+            clickable link.
+        </p>
+    </Overview>
+    <ChildContent>
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+            <div class="card object">
+                Card Link Demo
+            </div>
+        </div>
+    </ChildContent>
+</SectionBlock>

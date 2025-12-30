@@ -2,31 +2,36 @@
 
 @namespace Views.Server.Features
 
-<div>
-    <ContentArea>
-        <section id="@Id" class="py-16">
-            <div class="@(!WithOverview ? "mb-4" : "")">
-                @((MarkupString)BuildHeading(Heading, HeadingLevel))
-            </div>
-            @if (WithOverview) {
-                <div class="flex flex-col columns-2 gap-8 mb-8 lg:flex-row">
-                    <div class="basis-[50%]">
-                        @Overview
-                    </div>
-                    <div class="basis-[50%]">
-                        @Visual
-                    </div>
-                </div>
-            }
-            @if (WithContent) {
+<ContentArea>
+    <section id="@Id" class="py-16">
+        <div class="@(!WithOverview ? "mb-4" : "")">
+            @((MarkupString)BuildHeading(Heading, HeadingLevel))
+        </div>
+        @if (WithOverview) {
+            <div
+                class="
+                    grid
+                    grid-cols-1
+                    gap-8
+                    @(WithContent ? "mb-8" : "")
+                    lg:grid-cols-2
+                "
+            >
                 <div>
-                    @Content
+                    @Overview
                 </div>
-            }
-            @ChildContent
-        </section>
-    </ContentArea>
-</div>
+                <div>
+                    @Visual
+                </div>
+            </div>
+        }
+        @if (WithContent) {
+            <div>
+                @ChildContent
+            </div>
+        }
+    </section>
+</ContentArea>
 
 @code{
     [Parameter]
