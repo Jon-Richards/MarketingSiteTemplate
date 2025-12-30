@@ -1,7 +1,7 @@
 @namespace Views.Server.Components
 
 <a href="@Href" target="@Target" class="card-link">
-    <div class="card @(Modifiers)">
+    <div class="card p-8 @(Class)">
         @ChildContent
     </div>
 </a>
@@ -20,10 +20,11 @@
     public string Target { get; set; } = "_self";
 
     /// <summary>
-    /// Modifier CSS classes.  These will be appended to the Card element.
+    /// Modifier CSS classes.  These will be appended to the CSS classes on the
+    /// Card element.
     /// </summary>
     [Parameter]
-    public string Modifiers { get; set; } = "";
+    public string Class { get; set; } = "";
 
     [Parameter]
     public RenderFragment ChildContent { get; set; }
