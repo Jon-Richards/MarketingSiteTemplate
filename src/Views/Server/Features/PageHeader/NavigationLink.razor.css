@@ -1,0 +1,28 @@
+.navigation-link {
+  background-color: var(--color-light-2);
+  border: thin solid;
+  border-color: transparent;
+  border-radius: var(--radius-sm);
+  color: var(--color-interactive-3);
+  display: inline-block;
+  font-size: var(--text-base);
+  font-weight: 600;
+  padding: var(--spacing) calc(var(--spacing) * 2);
+  outline: 0;
+
+  @variant dark {
+    background-color: var(--color-shadow-1);
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: var(--color-shadow-1);
+  }
+}
+.navigation-link:hover,
+.navigation-link:focus {
+  box-shadow: 0 0 0 calc(var(--spacing) * 0.25) var(--color-interactive-3);
+}
+
+.navigation-link--active {
+  border-color: var(--interactive-3);
+}

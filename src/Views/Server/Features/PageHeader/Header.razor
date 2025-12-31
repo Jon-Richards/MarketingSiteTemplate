@@ -1,28 +1,80 @@
 @using Microsoft.AspNetCore.Components.Sections
+@using Views.Server.Components.Icons
 
 @namespace Views.Server.Features.PageHeader
 
 <header
+    data-feature="mobile-nav"
     class="
+        group/mobile-nav
+        sticky
+        top-0
         flex
         flex-col
+        px-8
+        py-4
         w-full
-        mx-auto
-        p-8
-        bg-light-2
-        dark:bg-shadow-1
+        data-[is-open=true]:h-screen
+        data-[is-open=true]:bg-light-2
+        dark:data-[is-open=true]:bg-shadow-1
+        md:data-[is-open=true]:h-auto
+        md:data-[is-open=true]:bg-transparent
+        md:relative
         md:flex-row
-        md:columns-2
+        md:h-auto
     "
 >
-    <div class="shrink text-center md:text-right">
-        @Heading
+    <div class="flex shrink items-center justify-between">
+        <div>@Heading</div>
+        <button
+            data-feature="mobile-nav.toggle"
+            class="
+                bg-light-2
+                dark:bg-shadow-1
+                px-2
+                py-1
+                border
+                border-interactive-3
+                rounded-sm
+                md:hidden
+            "
+        >
+            <div
+                data-feature="mobile-nab.toggle.open-icon"
+                class="
+                    inline-block
+                    group-data-[is-open=true]/mobile-nav:hidden
+                "
+            >
+                <HamburgerIcon Class="w-8 h-8 text-interactive-3"/>
+            </div>
+            <div
+                data-feature="mobile-nav.toggle.close-icon"
+                class="
+                    hidden
+                    group-data-[is-open=true]/mobile-nav:inline-block
+                "
+            >
+                <XMarkIcon Class="w-8 h-8 text-interactive-3" />
+            </div>
+        </button>
     </div>
-    <div class="grow text-center md:text-right">
-        <div class="flex items-center justify-center md:justify-end gap-8 border-red-400">
-            @Navigation
-        </div>
-    </div>
+    <nav
+        data-feature="mobile-nav.menu"
+        class="
+            hidden
+            group-data-[is-open=true]/mobile-nav:flex
+            grow
+            py-4
+            md:flex
+            md:justify-end
+            md:py-0
+        "
+    >
+        <ul class="flex flex-col gap-4 md:flex-row">
+            @NavigationLinks
+        </ul>
+    </nav>
 </header>
 
 @code {
@@ -30,5 +82,5 @@
     public RenderFragment Heading { get; set; }
 
     [Parameter]
-    public RenderFragment Navigation { get; set; }
+    public RenderFragment NavigationLinks { get; set; }
 }

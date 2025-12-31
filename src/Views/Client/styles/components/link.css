@@ -1,0 +1,10 @@
+.link {
+  color: var(--color-interactive-3);
+  font-family: 'Outfit', sans-serif;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--color-interactive-2);
+  text-decoration: wavy;
+}

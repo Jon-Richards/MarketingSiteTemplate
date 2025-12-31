@@ -1,5 +1,6 @@
 @page "/about"
 @using Microsoft.AspNetCore.Components.Sections
+@using Site.Components.Shared
 @using Views.Server.Components
 @using Views.Server.Features
 @using Views.Server.Layouts
@@ -16,8 +17,8 @@
     <div>This is header slot content.</div>
 </SectionContent>
 
-<SectionContent SectionName="Navigation">
-    <div>Navigation content.</div>
+<SectionContent SectionName="NavigationLinks">
+    <MainNavigation ActiveLink="About" />
 </SectionContent>
 
 <p>
