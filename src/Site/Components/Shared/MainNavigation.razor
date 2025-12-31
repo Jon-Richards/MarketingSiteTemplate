@@ -1,0 +1,15 @@
+@using Views.Server.Features.PageHeader
+
+@namespace Site.Components.Shared
+
+<NavigationLink Href="/" IsActive="@(ActiveLink == "Home")">
+    Home
+</NavigationLink>
+<NavigationLink Href="/style-guide" IsActive="@(ActiveLink == "StyleGuide")">
+    Style Guide
+</NavigationLink>
+
+@code {
+    [Parameter]
+    public string ActiveLink { get; set; } = "";
+}

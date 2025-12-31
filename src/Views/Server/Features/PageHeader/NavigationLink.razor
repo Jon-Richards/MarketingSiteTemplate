@@ -1,0 +1,29 @@
+@using Views.Server.Components
+
+@namespace Views.Server.Features.PageHeader
+
+<div class="inline-flex items-center">
+    @if (IsActive)
+    {
+        <CardLink Href="@Href" Class="px-4 py-2">
+            @ChildContent
+        </CardLink>
+    }
+    else
+    {
+        <a href="@Href" class="inline-block">
+            @ChildContent
+        </a>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string Href { get; set; }
+
+    [Parameter]
+    public bool IsActive { get; set; } = false;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

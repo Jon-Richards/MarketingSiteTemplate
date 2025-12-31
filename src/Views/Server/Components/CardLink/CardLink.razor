@@ -1,7 +1,7 @@
 @namespace Views.Server.Components
 
 <a href="@Href" target="@Target" class="card-link">
-    <div class="card p-8 @(Class)">
+    <div class="@GetCardClasses()">
         @ChildContent
     </div>
 </a>
@@ -28,4 +28,13 @@
 
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+
+    private string GetCardClasses()
+    {
+        if (string.IsNullOrEmpty(Class))
+        {
+            return "card p-8";
+        }
+        return $"card {Class}";
+    }
 }

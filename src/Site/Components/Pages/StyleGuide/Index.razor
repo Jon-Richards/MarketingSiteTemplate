@@ -1,5 +1,6 @@
 @page "/style-guide"
 @using Microsoft.AspNetCore.Components.Sections
+@using Site.Components.Shared
 @using Views.Server.Components
 @using Views.Server.Features
 @using Views.Server.Layouts
@@ -19,7 +20,7 @@
 </SectionContent>
 
 <SectionContent SectionName="Navigation">
-    <div>Navigation content.</div>
+    <MainNavigation ActiveLink="StyleGuide" />
 </SectionContent>
 
 <SectionBlock Id="overview" Heading="Style Guide" HeadingLevel="1">

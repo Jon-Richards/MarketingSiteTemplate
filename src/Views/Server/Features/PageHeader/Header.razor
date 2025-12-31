@@ -1,6 +1,6 @@
 @using Microsoft.AspNetCore.Components.Sections
 
-@namespace Views.Server.Features
+@namespace Views.Server.Features.PageHeader
 
 <header
     class="
@@ -19,7 +19,9 @@
         @Heading
     </div>
     <div class="grow text-center md:text-right">
-        @Navigation
+        <div class="flex items-center justify-center md:justify-end gap-8 border-red-400">
+            @Navigation
+        </div>
     </div>
 </header>
 
