@@ -1,5 +1,6 @@
 @using Microsoft.AspNetCore.Components.Sections
 @using Views.Server.Components.Icons
+@using Views.Server.Features.PageHeader
 
 @namespace Views.Server.Features.PageHeader
 
@@ -7,11 +8,9 @@
     data-feature="mobile-nav"
     class="
         group/mobile-nav
-        sticky
-        top-0
         flex
-        flex-col
-        px-8
+        items-center
+        px-4
         py-4
         w-full
         data-[is-open=true]:h-screen
@@ -19,51 +18,28 @@
         dark:data-[is-open=true]:bg-shadow-1
         md:data-[is-open=true]:h-auto
         md:data-[is-open=true]:bg-transparent
-        md:relative
-        md:flex-row
+        md:px-8
         md:h-auto
     "
 >
-    <div class="flex shrink items-center justify-between">
-        <div>@Heading</div>
-        <button
-            data-feature="mobile-nav.toggle"
-            class="
-                bg-light-2
-                dark:bg-shadow-1
-                px-2
-                py-1
-                border
-                border-interactive-3
-                rounded-sm
-                md:hidden
-            "
-        >
-            <div
-                data-feature="mobile-nab.toggle.open-icon"
-                class="
-                    inline-block
-                    group-data-[is-open=true]/mobile-nav:hidden
-                "
-            >
-                <HamburgerIcon Class="w-8 h-8 text-interactive-3"/>
-            </div>
-            <div
-                data-feature="mobile-nav.toggle.close-icon"
-                class="
-                    hidden
-                    group-data-[is-open=true]/mobile-nav:inline-block
-                "
-            >
-                <XMarkIcon Class="w-8 h-8 text-interactive-3" />
-            </div>
-        </button>
+    <div class="shrink flex items-center">
+        @Heading
     </div>
     <nav
         data-feature="mobile-nav.menu"
         class="
             hidden
             group-data-[is-open=true]/mobile-nav:flex
+            group-data-[is-open=true]/mobile-nav:justify-center
+            group-data-[is-open=true]/mobile-nav:py-24
+            group-data-[is-open=true]/mobile-nav:fixed
+            group-data-[is-open=true]/mobile-nav:top-0
+            group-data-[is-open=true]/mobile-nav:left-0
+            group-data-[is-open=true]/mobile-nav:w-full
+            group-data-[is-open=true]/mobile-nav:h-screen
+            group-data-[is-open=true]/mobile-nav:bg-light-2
+            group-data-[is-open=true]/mobile-nav:dark:bg-shadow-1
+            group-data-[is-open=true]/mobile-nav:dark:z-1
             grow
             py-4
             md:flex
@@ -75,6 +51,7 @@
             @NavigationLinks
         </ul>
     </nav>
+    <HamburgerButton />
 </header>
 
 @code {

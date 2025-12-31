@@ -1,0 +1,44 @@
+@using Views.Server.Components.Icons
+
+@namespace Views.Server.Features.PageHeader
+
+<button
+    data-feature="mobile-nav.toggle"
+    class="
+        fixed
+        top-4
+        right-4
+        bg-light-1
+        dark:bg-shadow-2
+        outline-0
+        object
+        interactive-border
+        px-2
+        py-1
+        rounded-sm
+        hover:bg-light-1
+        hover:dark:bg-shadow-3
+        hover:cursor-pointer
+        group-data-[is-open=true]/mobile-nav:dark:z-20
+        md:hidden
+    "
+>
+    <div
+        data-feature="mobile-nab.toggle.open-icon"
+        class="
+            inline-block
+            group-data-[is-open=true]/mobile-nav:hidden
+        "
+    >
+        <HamburgerIcon Class="w-8 h-8 text-interactive-3"/>
+    </div>
+    <div
+        data-feature="mobile-nav.toggle.close-icon"
+        class="
+            hidden
+            group-data-[is-open=true]/mobile-nav:inline-block
+        "
+    >
+        <XMarkIcon Class="w-8 h-8 text-interactive-3" />
+    </div>
+</button>

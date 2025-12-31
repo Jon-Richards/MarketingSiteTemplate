@@ -59,6 +59,7 @@
   @import "./components/card.css";
   @import "./components/headings.css";
   @import "./components/hr.css";
+  @import "./components/interactive-border.css";
   @import "./components/sub-heading.css";
   @import "./components/link.css";
   @import "./components/copy.css";

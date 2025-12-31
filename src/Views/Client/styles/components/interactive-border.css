@@ -1,0 +1,12 @@
+/**
+ * Renders a theme appropriate border that doesn't trigger a reflow.  Intended
+ * for interactive elements like buttons or Card Links.
+ */
+.interactive-border {
+  box-shadow: 0 0 0 calc(var(--spacing) * 0.25) var(--color-interactive-3);
+  transition: box-shadow 100ms linear;
+}
+.interactive-border:hover,
+.interactive-border:focus {
+  box-shadow: 0 0 0 calc(var(--spacing) * 0.75) var(--color-interactive-3);
+}
