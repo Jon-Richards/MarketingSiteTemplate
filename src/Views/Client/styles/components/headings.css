@@ -34,3 +34,19 @@
 .heading-4.heading-top {
   margin-top: calc(var(--spacing) * -2);
 }
+
+.heading-5 {
+  font-size: calc(var(--spacing) * 5);
+  margin-bottom: calc(var(--spacing) * 1.5);
+}
+.heading-5.heading-top {
+  margin-top: calc(var(--spacing) * -1.5);
+}
+
+.heading-6 {
+  font-size: calc(var(--spacing) * 4);
+  margin-bottom: var(--spacing);
+}
+.heading-6.heading-top {
+  margin-top: var(--spacing);
+}

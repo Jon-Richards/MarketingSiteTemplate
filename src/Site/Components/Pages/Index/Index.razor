@@ -1,6 +1,7 @@
 @page "/"
 @using Microsoft.AspNetCore.Components.Sections
 @using Views.Server.Layouts
+@using Site.Components.Shared
 @layout BasicLayout
 
 <SectionContent SectionName="Head">
@@ -8,6 +9,18 @@
     <title>Foo</title>
 </SectionContent>
 
+<SectionContent SectionName="Heading">
+    <div>This is header slot content.</div>
+</SectionContent>
+
+<SectionContent SectionName="NavigationLinks">
+    <MainNavigation ActiveLink="Home" />
+</SectionContent>
+
 <h1>
     Index Page
 </h1>
+
+<SectionContent SectionName="Footer">
+    <MainFooter />
+</SectionContent>

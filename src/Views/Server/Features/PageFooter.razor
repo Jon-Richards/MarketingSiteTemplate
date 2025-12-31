@@ -2,20 +2,20 @@
 
 @namespace Views.Server.Features
 
+<hr class="hr my-0" />
 <footer class="bg-light-2 dark:bg-shadow-1">
     <ContentArea>
-        <div class="py-8 text-center">
-            <div class="mb-2">
-                Socials
-            </div>
-            <div>
-                <span class="block sm:inline-block">
-                    &copy;2026 Jonathan Richards,
-                </span>
-                <span class="block sm:inline-block">
-                    All rights reserved.
-                </span>
-            </div>
+        <div class="my-16">
+            @ChildContent
+        </div>
+        <hr class="hr" />
+        <div class="mt-4 mb-8 text-right text-shadow-5 dark:text-light-5">
+            &copy;2026&nbsp;Some&nbsp;Company&nbsp;LLC, All&nbsp;rights&nbsp;reserved.
         </div>
     </ContentArea>
 </footer>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

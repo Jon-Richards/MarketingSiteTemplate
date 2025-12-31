@@ -99,3 +99,13 @@
 .copy ul.emoji li.heart::before {
   content: "\2665";
 }
+
+.copy ul.minimal {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.copy ul.minimal li {
+  list-style-type: none;
+  padding-left: 0;
+}
