@@ -1,4 +1,5 @@
 @using Views.Server.Features
+@using Views.Server.Components
 @using Site.Components.Pages.StyleGuide
 
 @namespace Site.Components.Pages.StyleGuide.Features
@@ -10,15 +11,17 @@
         </p>
     </Overview>
     <ChildContent>
-        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
-            <div class="card object">Flash</div>
-            <div class="card object">Page Header</div>
-            <div class="card object">Page Footer</div>
-            <div class="card object">Section Block</div>
-            <DocLink Href="/style-guide/features/banner-block">
-                Banner Block
-            </DocLink>
-        </div>
+        <ContentArea>
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+                <div class="card object">Flash</div>
+                <div class="card object">Page Header</div>
+                <div class="card object">Page Footer</div>
+                <div class="card object">Section Block</div>
+                <DocLink Href="/style-guide/features/banner-block">
+                    Banner Block
+                </DocLink>
+            </div>
+        </ContentArea>
     </ChildContent>
 </SectionBlock>
 

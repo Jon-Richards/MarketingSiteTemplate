@@ -30,48 +30,46 @@
         </p>
     </Overview>
     <ChildContent>
-        <div class="grid gap-8 md:grid-cols-3">
-            <div class="card object p-8 copy md:col-span-2">
-                <h2 class="heading heading-2">Overview</h2>
-                <p>
-                    Banner blocks have two slots: "BackgroundContent" and
-                    "ChildContent".
-                </p>
-                <p>
-                    "BackgroundContent" renders the contents of the banner's
-                    background, which is left open-ended.  This means that
-                    background content can be anything you like, e.g. a video,
-                    figure, pattern, etc.
-                </p>
-                <p>
-                    "ChildContent" is responsible for render the main content of
-                    the block.  This should be readable by the user, regardless of
-                    the block's background.
-                </p>
+        <ContentArea>
+            <div class="grid gap-8 mb-8 md:grid-cols-3">
+                <div class="card object p-8 copy md:col-span-2">
+                    <h2 class="heading heading-2">Overview</h2>
+                    <p>
+                        Banner blocks have two slots: "BackgroundContent" and
+                        "ChildContent".
+                    </p>
+                    <p>
+                        "BackgroundContent" renders the contents of the banner's
+                        background, which is left open-ended.  This means that
+                        background content can be anything you like, e.g. a video,
+                        figure, pattern, etc.
+                    </p>
+                    <p>
+                        "ChildContent" is responsible for render the main content of
+                        the block.  This should be readable by the user, regardless of
+                        the block's background.
+                    </p>
+                </div>
             </div>
-        </div>
+        </ContentArea>
+        <ContentArea>
+            <h2 class="heading heading-2">Example</h2>
+        </ContentArea>
+        <Views.Server.Features.BannerBlock>
+            <BackgroundContent>
+                <div class="bg-teal-700 w-full h-full"></div>
+            </BackgroundContent>
+            <ChildContent>
+                <div class="text-center">
+                    <h3 class="heading heading-2">This Is A Banner Block</h3>
+                    <p class="sub-heading">
+                        This is an elaboration.
+                    </p>
+                </div>
+            </ChildContent>
+        </Views.Server.Features.BannerBlock>
     </ChildContent>
 </SectionBlock>
-
-<ContentArea>
-    <h2 class="heading heading-2">Example</h2>
-</ContentArea>
-
-<Views.Server.Features.BannerBlock>
-    <BackgroundContent>
-        <div class="bg-teal-700 w-full h-full"></div>
-    </BackgroundContent>
-    <ChildContent>
-        <div class="text-center">
-            <h3 class="heading heading-2">This Is A Banner Block</h3>
-            <p class="sub-heading">
-                This is an elaboration.
-            </p>
-        </div>
-    </ChildContent>
-</Views.Server.Features.BannerBlock>
-
-<div class="mb-16"></div>
 
 <SectionContent SectionName="Footer">
     <MainFooter />

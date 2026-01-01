@@ -32,20 +32,22 @@
         </p>
     </Overview>
     <ChildContent>
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
-            <DocLink Href="#design-guidelines">
-                Design Guidelines
-            </DocLink>
-            <DocLink Href="#features">
-                Features
-            </DocLink>
-            <DocLink Href="#server-components">
-                Server Components
-            </DocLink>
-            <DocLink Href="#css-components">
-                CSS Components
-            </DocLink>
-        </div>
+        <ContentArea>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+                <DocLink Href="#design-guidelines">
+                    Design Guidelines
+                </DocLink>
+                <DocLink Href="#features">
+                    Features
+                </DocLink>
+                <DocLink Href="#server-components">
+                    Server Components
+                </DocLink>
+                <DocLink Href="#css-components">
+                    CSS Components
+                </DocLink>
+            </div>
+        </ContentArea>
     </ChildContent>
 </SectionBlock>
 
@@ -55,43 +57,45 @@
 
 <SectionBlock Id="design-guidelines" Heading="Design Guidelines" WithOverview="false">
     <ChildContent>
-        <div class="grid gap-4 grid-cols-1 mb-8 md:grid-cols-3">
-            <div class="card object copy col-span-1 md:col-span-2">
-                <h3 class="heading heading-3">
-                    Overview
-                </h3>
-                <p>
-                    The guide uses a combination of server rendered components
-                    (Blazor), React, and CSS components via Tailwind.
-                </p>
-                <hr class="hr">
-                <h3 class="heading heading-3">
-                    When To Use Which Component Style
-                </h3>
-                <p>
-                    If your component only needs a single HTML tag, consider writing
-                    a CSS component.  These are generally the most granular, and used
-                    both as part of larger components and in static content.
-                </p>
-                <p>
-                    If your component needs multiple HTML tags and conditional
-                    rendering, but does not require rich interactivity beyond its initial
-                    render, consider using a Blazor component (.razor).  These offer
-                    the flexibility of client side components but render server side, making them
-                    slightly better for SEO.
-                </p>
-                <p>
-                    If your component is part of a feature with rich interactivity, consider writing
-                    it in React.
-                </p>
+        <ContentArea>
+            <div class="grid gap-4 grid-cols-1 mb-8 md:grid-cols-3">
+                <div class="card object copy col-span-1 md:col-span-2">
+                    <h3 class="heading heading-3">
+                        Overview
+                    </h3>
+                    <p>
+                        The guide uses a combination of server rendered components
+                        (Blazor), React, and CSS components via Tailwind.
+                    </p>
+                    <hr class="hr">
+                    <h3 class="heading heading-3">
+                        When To Use Which Component Style
+                    </h3>
+                    <p>
+                        If your component only needs a single HTML tag, consider writing
+                        a CSS component.  These are generally the most granular, and used
+                        both as part of larger components and in static content.
+                    </p>
+                    <p>
+                        If your component needs multiple HTML tags and conditional
+                        rendering, but does not require rich interactivity beyond its initial
+                        render, consider using a Blazor component (.razor).  These offer
+                        the flexibility of client side components but render server side, making them
+                        slightly better for SEO.
+                    </p>
+                    <p>
+                        If your component is part of a feature with rich interactivity, consider writing
+                        it in React.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
-            <div class="card object">Layout</div>
-            <div class="card object">Colors</div>
-            <div class="card object">Typography</div>
-            <div class="card object">Components</div>
-        </div>
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+                <div class="card object">Layout</div>
+                <div class="card object">Colors</div>
+                <div class="card object">Typography</div>
+                <div class="card object">Components</div>
+            </div>
+        </ContentArea>
     </ChildContent>
 </SectionBlock>
 

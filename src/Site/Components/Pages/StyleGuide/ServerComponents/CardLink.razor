@@ -29,49 +29,51 @@
         </p>
     </Overview>
     <ChildContent>
-        <div class="card object mb-8">
-            <div class="mb-8">
-                <h2 class="heading heading-3">Usage Guidelines</h2>
-                <div class="copy">
-                    <ul class="emoji">
-                        <li class="check">
-                            Card Links combine styles from Cards and Links.
-                        </li>
-                        <li class="check">
-                            The entire Card is tabbable and clickable.
-                        </li>
-                        <li class="check">
-                            Use of imagery and iconography is heavily encouraged.
-                        </li>
-                        <li class="check">
-                            Card Links may link to other pages, other sites, or
-                            anchors on the same page.
-                        </li>
-                        <li class="x">
-                            Card links are for navigation, not UI actions.  Use
-                            a button when appropriate.
-                        </li>
-                        <li class="x">
-                            When nested within another card, Card Links should not
-                            use the "object" modifier class.
-                        </li>
-                    </ul>
+        <ContentArea>
+            <div class="card object mb-8">
+                <div class="mb-8">
+                    <h2 class="heading heading-3">Usage Guidelines</h2>
+                    <div class="copy">
+                        <ul class="emoji">
+                            <li class="check">
+                                Card Links combine styles from Cards and Links.
+                            </li>
+                            <li class="check">
+                                The entire Card is tabbable and clickable.
+                            </li>
+                            <li class="check">
+                                Use of imagery and iconography is heavily encouraged.
+                            </li>
+                            <li class="check">
+                                Card Links may link to other pages, other sites, or
+                                anchors on the same page.
+                            </li>
+                            <li class="x">
+                                Card links are for navigation, not UI actions.  Use
+                                a button when appropriate.
+                            </li>
+                            <li class="x">
+                                When nested within another card, Card Links should not
+                                use the "object" modifier class.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="heading heading-3">Examples</h2>
+                    <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+                        <Views.Server.Components.CardLink Href="#">
+                            Normal
+                        </Views.Server.Components.CardLink>
+                        <Views.Server.Components.CardLink Href="#" Class="object">
+                            Class="object"
+                        </Views.Server.Components.CardLink>
+                        <Views.Server.Components.CardLink Href="#" Class="card--skeletal">
+                            Class="card--skeletal"
+                        </Views.Server.Components.CardLink>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h2 class="heading heading-3">Examples</h2>
-                <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-                    <Views.Server.Components.CardLink Href="#">
-                        Normal
-                    </Views.Server.Components.CardLink>
-                    <Views.Server.Components.CardLink Href="#" Class="object">
-                        Class="object"
-                    </Views.Server.Components.CardLink>
-                    <Views.Server.Components.CardLink Href="#" Class="card--skeletal">
-                        Class="card--skeletal"
-                    </Views.Server.Components.CardLink>
-                </div>
-            </div>
-        </div>
+        </ContentArea>
     </ChildContent>
 </SectionBlock>
