@@ -1,10 +1,11 @@
 .link {
   color: var(--color-interactive-3);
   font-family: 'Outfit', sans-serif;
+  outline: none;
 }
 
 .link:hover,
 .link:focus {
-  color: var(--color-interactive-2);
-  text-decoration: wavy;
+  text-decoration: underline;
+  text-underline-offset: var(--spacing);
 }

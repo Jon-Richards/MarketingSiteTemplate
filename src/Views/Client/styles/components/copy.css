@@ -1,3 +1,15 @@
+.copy a[href] {
+  color: var(--color-interactive-3);
+  font-family: 'Outfit', sans-serif;
+  outline: none;
+}
+.copy a[href]:hover,
+.copy a[href]:focus {
+  text-decoration: underline;
+  text-underline-offset: var(--spacing);
+}
+
+
 .copy p {
   font-size: var(--text-lg);
   line-height: 1.8;
