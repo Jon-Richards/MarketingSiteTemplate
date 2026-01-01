@@ -1,0 +1,22 @@
+@using Views.Server.Components
+
+@namespace Views.Server.Features
+
+<div class="relative">
+    <div class="absolute top-0 left-0 w-full h-full z-1">
+        @BackgroundContent
+    </div>
+    <div class="relative py-16 z-2">
+        <ContentArea>
+            @ChildContent
+        </ContentArea>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment BackgroundContent { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}
