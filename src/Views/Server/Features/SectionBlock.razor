@@ -2,8 +2,8 @@
 
 @namespace Views.Server.Features
 
-<ContentArea>
-    <section id="@Id" class="py-16">
+<section id="@Id" class="py-16">
+    <ContentArea>
         <div class="@(!WithOverview ? "mb-4" : "")">
             @((MarkupString)BuildHeading(Heading, HeadingLevel))
         </div>
@@ -25,13 +25,13 @@
                 </div>
             </div>
         }
-        @if (WithContent) {
-            <div>
-                @ChildContent
-            </div>
-        }
-    </section>
-</ContentArea>
+    </ContentArea>
+    @if (WithContent) {
+        <div>
+            @ChildContent
+        </div>
+    }
+</section>
 
 @code{
     [Parameter]
